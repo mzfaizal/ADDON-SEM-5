@@ -27,14 +27,48 @@ INSERT INTO Authors (AuthorID, Name, Country) VALUES
 (2, 'George Orwell', 'United Kingdom'),
 (3, 'Haruki Murakami', 'Japan');
 
+--to view the table
+select * from Authors;
+
+--output
++----------+-----------------+----------------+
+| AuthorID | Name            | Country        |
++----------+-----------------+----------------+
+|        1 | J.K. Rowling    | United Kingdom |
+|        2 | George Orwell   | United Kingdom |
+|        3 | Haruki Murakami | Japan          |
++----------+-----------------+----------------+
 -- Insert data into Books
 INSERT INTO Books (BookID, Title, AuthorID, YearPublished) VALUES
 (1, 'Harry Potter and the Philosopher\'s Stone', 1, 1997),
 (2, '1984', 2, 1949),
 (3, 'Kafka on the Shore', 3, 2002);
 
+--to view the table
+select * from Books;
+
+--output
++--------+------------------------------------------+----------+---------------+
+| BookID | Title                                    | AuthorID | YearPublished |
++--------+------------------------------------------+----------+---------------+
+|      1 | Harry Potter and the Philosopher's Stone |        1 |          1997 |
+|      2 | 1984                                     |        2 |          1949 |
+|      3 | Kafka on the Shore                       |        3 |          2002 |
++--------+------------------------------------------+----------+---------------+
 -- Insert data into Borrowers
 INSERT INTO Borrowers (BorrowerID, Name, Email, Phone) VALUES
 (1, 'Alice Johnson', 'alice.johnson@example.com', '555-1234'),
 (2, 'Bob Smith', 'bob.smith@example.com', '555-5678'),
 (3, 'Carol Lee', 'carol.lee@example.com', '555-8765');
+
+--to view the table
+select * from Borrowers;
+
+--output
++------------+---------------+---------------------------+----------+
+| BorrowerID | Name          | Email                     | Phone    |
++------------+---------------+---------------------------+----------+
+|          1 | Alice Johnson | alice.johnson@example.com | 555-1234 |
+|          2 | Bob Smith     | bob.smith@example.com     | 555-5678 |
+|          3 | Carol Lee     | carol.lee@example.com     | 555-8765 |
++------------+---------------+---------------------------+----------+
