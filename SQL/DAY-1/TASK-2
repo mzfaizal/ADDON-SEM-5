@@ -1,0 +1,53 @@
+--change the database
+use faizal;
+
+--create a table named course
+ create table course(
+    -> course_id INT PRIMARY KEY,
+    ->     course_name VARCHAR(100) NOT NULL,
+    ->     duration VARCHAR(20),
+    ->     start_date DATE,
+    ->     end_date DATE,
+    ->     fees DECIMAL(10, 2),
+    ->     category VARCHAR(50),
+    -> );
+
+-- insert records in the table course
+INSERT INTO course (
+    ->     course_id, course_name, duration, start_date, end_date, fees, category)
+    -> VALUES
+    -> (1, 'Python Basics', '3 Months', '2025-07-01', '2025-09-30', 5000.00, 'Programming'),
+    -> (2, 'Web Development', '4 Months', '2025-07-15', '2025-11-15', 7500.00, 'Web Design'),
+    -> (3, 'Data Science', '6 Months', '2025-08-01', '2026-01-31', 15000.00, 'AI/ML'),
+    -> (4, 'Digital Marketing', '2 Months', '2025-07-20', '2025-09-20', 4000.00, 'Marketing'),
+    -> (5, 'Cyber Security', '5 Months', '2025-08-05', '2026-01-05', 12000.00, 'Security');
+
+--output
+ select * from course;
++-----------+-------------------+----------+------------+------------+----------+-------------+
+| course_id | course_name       | duration | start_date | end_date   | fees     | category    |
++-----------+-------------------+----------+------------+------------+----------+-------------+
+|         1 | Python Basics     | 3 Months | 2025-07-01 | 2025-09-30 |  5000.00 | Programming |
+|         2 | Web Development   | 4 Months | 2025-07-15 | 2025-11-15 |  7500.00 | Web Design  |
+|         3 | Data Science      | 6 Months | 2025-08-01 | 2026-01-31 | 15000.00 | AI/ML       |
+|         4 | Digital Marketing | 2 Months | 2025-07-20 | 2025-09-20 |  4000.00 | Marketing   |
+|         5 | Cyber Security    | 5 Months | 2025-08-05 | 2026-01-05 | 12000.00 | Security    |
++-----------+-------------------+----------+------------+------------+----------+-------------+
+
+
+-- update fees 
+ update course
+    -> set fees = fees + 500;
+Query OK, 5 rows affected (0.04 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from course;
++-----------+-------------------+----------+------------+------------+----------+-------------+
+| course_id | course_name       | duration | start_date | end_date   | fees     | category    |
++-----------+-------------------+----------+------------+------------+----------+-------------+
+|         1 | Python Basics     | 3 Months | 2025-07-01 | 2025-09-30 |  5500.00 | Programming |
+|         2 | Web Development   | 4 Months | 2025-07-15 | 2025-11-15 |  8000.00 | Web Design  |
+|         3 | Data Science      | 6 Months | 2025-08-01 | 2026-01-31 | 15500.00 | AI/ML       |
+|         4 | Digital Marketing | 2 Months | 2025-07-20 | 2025-09-20 |  4500.00 | Marketing   |
+|         5 | Cyber Security    | 5 Months | 2025-08-05 | 2026-01-05 | 12500.00 | Security    |
++-----------+-------------------+----------+------------+------------+----------+-------------+
