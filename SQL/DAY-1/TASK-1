@@ -1,1 +1,56 @@
-faizal
+-- creating a database
+create database faizal;
+
+-- change database 
+use faizal;
+
+-- creating a table name "STUDENTS"
+CREATE TABLE STUDENTS (
+    StudentId INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DOB DATE,
+    Gender VARCHAR(10),
+    Email VARCHAR(100) UNIQUE,
+    PhoneNumber VARCHAR(15),
+    Address TEXT,
+    CourseFee DECIMAL(10, 2)
+)
+
+-- adding 5 records in table Students
+INSERT INTO STUDENTS (StudentId, FirstName, LastName, DOB, Gender, Email, PhoneNumber, Address, CourseFee) VALUES
+(1, 'Aarav', 'Sharma', '2003-04-15', 'Male', 'aarav.sharma@example.com', '9876543210', 'Delhi, India', 25000.00),
+(2, 'Sneha', 'Verma', '2004-06-20', 'Female', 'sneha.verma@example.com', '9876543211', 'Mumbai, India', 26000.00),
+(3, 'Rahul', 'Kumar', '2002-11-08', 'Male', 'rahul.kumar@example.com', '9876543212', 'Bangalore, India', 25500.00),
+(4, 'Ananya', 'Singh', '2003-09-01', 'Female', 'ananya.singh@example.com', '9876543213', 'Kolkata, India', 24800.00),
+(5, 'Mohit', 'Joshi', '2001-12-25', 'Male', 'mohit.joshi@example.com', '9876543214', 'Chennai, India', 27000.00);
+
+--output
+ select * from STUDENTS;
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+| StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+|         1 | Aarav     | Sharma   | 2003-04-15 | Male   | aarav.sharma@example.com | 9876543210  | Delhi, India     |  25000.00 |
+|         2 | Sneha     | Verma    | 2004-06-20 | Female | sneha.verma@example.com  | 9876543211  | Mumbai, India    |  26000.00 |
+|         3 | Rahul     | Kumar    | 2002-11-08 | Male   | rahul.kumar@example.com  | 9876543212  | Bangalore, India |  25500.00 |
+|         4 | Ananya    | Singh    | 2003-09-01 | Female | ananya.singh@example.com | 9876543213  | Kolkata, India   |  24800.00 |
+|         5 | Mohit     | Joshi    | 2001-12-25 | Male   | mohit.joshi@example.com  | 9876543214  | Chennai, India   |  27000.00 |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+
+
+-- update course fee for everyone
+UPDATE STUDENTS
+SET CourseFee = CourseFee + 3000.00;
+
+--output
+ select * from STUDENTS;
+ select * from STUDENTS;
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+| StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+|         1 | Aarav     | Sharma   | 2003-04-15 | Male   | aarav.sharma@example.com | 9876543210  | Delhi, India     |  28000.00 |
+|         2 | Sneha     | Verma    | 2004-06-20 | Female | sneha.verma@example.com  | 9876543211  | Mumbai, India    |  29000.00 |
+|         3 | Rahul     | Kumar    | 2002-11-08 | Male   | rahul.kumar@example.com  | 9876543212  | Bangalore, India |  28500.00 |
+|         4 | Ananya    | Singh    | 2003-09-01 | Female | ananya.singh@example.com | 9876543213  | Kolkata, India   |  27800.00 |
+|         5 | Mohit     | Joshi    | 2001-12-25 | Male   | mohit.joshi@example.com  | 9876543214  | Chennai, India   |  30000.00 |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
