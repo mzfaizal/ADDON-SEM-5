@@ -1,0 +1,40 @@
+CREATE TABLE Authors (
+    AuthorID INT P,
+    Name VARCHAR(100),
+    Country VARCHAR(50)
+);
+
+-- Create Books table
+CREATE TABLE Books (
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(150),
+    AuthorID INT,
+    YearPublished INT,
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID)
+);
+
+-- Create Borrowers table
+CREATE TABLE Borrowers (
+    BorrowerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Phone VARCHAR(20)
+);
+
+-- Insert data into Authors
+INSERT INTO Authors (AuthorID, Name, Country) VALUES
+(1, 'J.K. Rowling', 'United Kingdom'),
+(2, 'George Orwell', 'United Kingdom'),
+(3, 'Haruki Murakami', 'Japan');
+
+-- Insert data into Books
+INSERT INTO Books (BookID, Title, AuthorID, YearPublished) VALUES
+(1, 'Harry Potter and the Philosopher\'s Stone', 1, 1997),
+(2, '1984', 2, 1949),
+(3, 'Kafka on the Shore', 3, 2002);
+
+-- Insert data into Borrowers
+INSERT INTO Borrowers (BorrowerID, Name, Email, Phone) VALUES
+(1, 'Alice Johnson', 'alice.johnson@example.com', '555-1234'),
+(2, 'Bob Smith', 'bob.smith@example.com', '555-5678'),
+(3, 'Carol Lee', 'carol.lee@example.com', '555-8765');
