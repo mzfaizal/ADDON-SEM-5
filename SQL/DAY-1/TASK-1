@@ -6,7 +6,7 @@ use faizal;
 
 -- creating a table name "STUDENTS"
 CREATE TABLE STUDENTS (
-    StudentId INT PRIMARY KEY,
+    StudentId INT,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     DOB DATE,
@@ -14,8 +14,8 @@ CREATE TABLE STUDENTS (
     Email VARCHAR(100) UNIQUE,
     PhoneNumber VARCHAR(15),
     Address TEXT,
-    CourseFee DECIMAL(10, 2)
-)
+    CourseFee INT
+);
 
 -- adding 5 records in table Students
 INSERT INTO STUDENTS (StudentId, FirstName, LastName, DOB, Gender, Email, PhoneNumber, Address, CourseFee) VALUES
@@ -43,7 +43,6 @@ UPDATE STUDENTS
 SET CourseFee = CourseFee + 3000.00;
 
 --output
- select * from STUDENTS;
  select * from STUDENTS;
 +-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
 | StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee |
