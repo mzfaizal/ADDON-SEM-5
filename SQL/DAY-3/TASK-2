@@ -1,0 +1,15 @@
+-- course table already existed in DB faizal
+
+-- List courses by ascending fees
+mysql> SELECT *
+    -> FROM Course
+    -> ORDER BY fees ASC;
++-----------+-------------------+----------+------------+------------+-------+-------------+
+| course_id | course_name       | duration | start_date | end_date   | fees  | category    |
++-----------+-------------------+----------+------------+------------+-------+-------------+
+|         4 | Digital Marketing | 2 Months | 2025-07-20 | 2025-09-20 |  4500 | Marketing   |
+|         1 | Python Basics     | 3 Months | 2025-07-01 | 2025-09-30 |  5500 | Programming |
+|         2 | Web Development   | 4 Months | 2025-07-15 | 2025-11-15 |  8000 | Web Design  |
+|         5 | Cyber Security    | 5 Months | 2025-08-05 | 2026-01-05 | 12500 | Security    |
+|         3 | Data Science      | 6 Months | 2025-08-01 | 2026-01-31 | 15500 | AI/ML       |
++-----------+-------------------+----------+------------+------------+-------+-------------+
