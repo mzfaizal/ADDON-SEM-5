@@ -1,3 +1,4 @@
+---- course table already existed in DB faizal
 select * from employee;
 +------------+--------------+--------------+--------+
 | EmployeeID | Name         | DepartmentID | Salary |
