@@ -1,0 +1,20 @@
+
+--books table already existed in faizal DB
+select * from books;
++--------+------------------------------------------+----------+---------------+
+| BookID | Title                                    | AuthorID | YearPublished |
++--------+------------------------------------------+----------+---------------+
+|      1 | Harry Potter and the Philosopher's Stone |        1 |          1997 |
+|      2 | 1984                                     |        2 |          1949 |
+|      3 | Kafka on the Shore                       |        3 |          2002 |
++--------+------------------------------------------+----------+---------------+
+
+--Search books by keyword using LIKE
+SELECT *
+    -> FROM books
+    -> WHERE title LIKE 'Kafka%';
++--------+--------------------+----------+---------------+
+| BookID | Title              | AuthorID | YearPublished |
++--------+--------------------+----------+---------------+
+|      3 | Kafka on the Shore |        3 |          2002 |
++--------+--------------------+----------+---------------+
