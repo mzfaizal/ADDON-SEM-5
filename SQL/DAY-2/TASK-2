@@ -18,9 +18,26 @@ INSERT INTO Department (DepartmentID, DepartmentName) VALUES
 (2, 'Finance'),
 (3, 'Engineering');
 
++--------------+-----------------+
+| DepartmentID | DepartmentName  |
++--------------+-----------------+
+|            1 | Human Resources |
+|            2 | Finance         |
+|            3 | Engineering     |
++--------------+-----------------+
+
 --inserting records
 INSERT INTO Employee (EmployeeID, Name, DepartmentID, Salary) VALUES
 (1, 'John Doe', 3, 75000),
 (2, 'Jane Smith', 2, 68000),
 (3, 'Mike Johnson', 1, 55000),
 (4, 'Emily Davis', 3, 80000);
+
++------------+--------------+--------------+--------+
+| EmployeeID | Name         | DepartmentID | Salary |
++------------+--------------+--------------+--------+
+|          1 | John Doe     |            3 |  75000 |
+|          2 | Jane Smith   |            2 |  68000 |
+|          3 | Mike Johnson |            1 |  55000 |
+|          4 | Emily Davis  |            3 |  80000 |
++------------+--------------+--------------+--------+
