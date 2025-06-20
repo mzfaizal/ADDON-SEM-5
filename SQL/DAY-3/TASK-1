@@ -1,1 +1,12 @@
-faizal
+-- Students table already existed in DB faizal 
+--show the list of records who has marks more than 80
+SELECT *
+    -> FROM Students
+    -> where marks > 80;
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
+| StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee | marks |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
+|         3 | Rahul     | Kumar    | 2002-11-08 | Male   | rahul.kumar@example.com  | 9876543212  | Bangalore, India |     28500 |    90 |
+|         4 | Ananya    | Singh    | 2003-09-01 | Female | ananya.singh@example.com | 9876543213  | Kolkata, India   |     27800 |    95 |
+|         5 | Mohit     | Joshi    | 2001-12-25 | Male   | mohit.joshi@example.com  | 9876543214  | Chennai, India   |     30000 |    99 |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
