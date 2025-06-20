@@ -1,0 +1,55 @@
+-- already present table studens in faizal DB
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+| StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+|         1 | Aarav     | Sharma   | 2003-04-15 | Male   | aarav.sharma@example.com | 9876543210  | Delhi, India     |     28000 |
+|         2 | Sneha     | Verma    | 2004-06-20 | Female | sneha.verma@example.com  | 9876543211  | Mumbai, India    |     29000 |
+|         3 | Rahul     | Kumar    | 2002-11-08 | Male   | rahul.kumar@example.com  | 9876543212  | Bangalore, India |     28500 |
+|         4 | Ananya    | Singh    | 2003-09-01 | Female | ananya.singh@example.com | 9876543213  | Kolkata, India   |     27800 |
+|         5 | Mohit     | Joshi    | 2001-12-25 | Male   | mohit.joshi@example.com  | 9876543214  | Chennai, India   |     30000 |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+
+
+--already present table course in faizal DB
+
++-----------+-------------------+----------+------------+------------+-------+-------------+
+| course_id | course_name       | duration | start_date | end_date   | fees  | category    |
++-----------+-------------------+----------+------------+------------+-------+-------------+
+|         1 | Python Basics     | 3 Months | 2025-07-01 | 2025-09-30 |  5500 | Programming |
+|         2 | Web Development   | 4 Months | 2025-07-15 | 2025-11-15 |  8000 | Web Design  |
+|         3 | Data Science      | 6 Months | 2025-08-01 | 2026-01-31 | 15500 | AI/ML       |
+|         4 | Digital Marketing | 2 Months | 2025-07-20 | 2025-09-20 |  4500 | Marketing   |
+|         5 | Cyber Security    | 5 Months | 2025-08-05 | 2026-01-05 | 12500 | Security    |
++-----------+-------------------+----------+------------+------------+-------+-------------+
+
+-- creating Registration table 
+CREATE TABLE Registrations (
+    ->     registration_id INT,
+    ->     student_id INT,
+    ->     course_id INT,
+    ->     registration_date DATE,
+    ->     status VARCHAR(20) DEFAULT 'Active'
+    ->   );
+
+-- inserting records
+ INSERT INTO Registrations (registration_id, student_id, course_id, registration_date, status) VALUES
+    -> (1, 1, 1, '2025-06-20', 'Active'),
+    -> (2, 2, 2, '2025-06-21', 'Active'),
+    -> (3, 3, 3, '2025-06-22', 'Active'),
+    -> (4, 4, 1, '2025-06-23', 'Cancelled'),
+    -> (5, 5, 5, '2025-06-24', 'Active');
+
+
+--output
+SELECT * FROM Registrations;
++-----------------+------------+-----------+-------------------+-----------+
+| registration_id | student_id | course_id | registration_date | status    |
++-----------------+------------+-----------+-------------------+-----------+
+|               1 |          1 |         1 | 2025-06-20        | Active    |
+|               2 |          2 |         2 | 2025-06-21        | Active    |
+|               3 |          3 |         3 | 2025-06-22        | Active    |
+|               4 |          4 |         1 | 2025-06-23        | Cancelled |
+|               5 |          5 |         5 | 2025-06-24        | Active    |
++-----------------+------------+-----------+-------------------+-----------+
+
+
+
