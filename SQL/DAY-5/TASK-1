@@ -1,0 +1,25 @@
+--table students
+mysql> select * from students;
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
+| StudentId | FirstName | LastName | DOB        | Gender | Email                    | PhoneNumber | Address          | CourseFee | marks |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
+|         1 | Aarav     | Sharma   | 2003-04-15 | Male   | aarav.sharma@example.com | 9876543210  | Delhi, India     |     28000 |    70 |
+|         2 | Sneha     | Verma    | 2004-06-20 | Female | sneha.verma@example.com  | 9876543211  | Mumbai, India    |     29000 |    50 |
+|         3 | Rahul     | Kumar    | 2002-11-08 | Male   | rahul.kumar@example.com  | 9876543212  | Bangalore, India |     28500 |    90 |
+|         4 | Ananya    | Singh    | 2003-09-01 | Female | ananya.singh@example.com | 9876543213  | Kolkata, India   |     27800 |    95 |
+|         5 | Mohit     | Joshi    | 2001-12-25 | Male   | mohit.joshi@example.com  | 9876543214  | Chennai, India   |     30000 |    99 |
++-----------+-----------+----------+------------+--------+--------------------------+-------------+------------------+-----------+-------+
+
+-- Count students per course
+SELECT CourseFee, COUNT(*) AS student_count
+    -> FROM students
+    -> GROUP BY CourseFee;
++-----------+---------------+
+| CourseFee | student_count |
++-----------+---------------+
+|     28000 |             1 |
+|     29000 |             1 |
+|     28500 |             1 |
+|     27800 |             1 |
+|     30000 |             1 |
++-----------+---------------+
