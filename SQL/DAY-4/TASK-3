@@ -1,0 +1,8 @@
+--Search books by keyword using LIKE
+SELECT * FROM books
+    -> WHERE title LIKE 'H%';
++--------+------------------------------------------+----------+---------------+
+| BookID | Title                                    | AuthorID | YearPublished |
++--------+------------------------------------------+----------+---------------+
+|      1 | Harry Potter and the Philosopher's Stone |        1 |          1997 |
++--------+------------------------------------------+----------+---------------+
