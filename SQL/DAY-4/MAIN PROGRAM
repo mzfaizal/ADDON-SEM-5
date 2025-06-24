@@ -1,0 +1,28 @@
+--create table customers
+CREATE TABLE customers (
+    ->     customer_id INT,
+    ->   first_name VARCHAR(50),
+    ->     last_name VARCHAR(50),
+    ->     city VARCHAR(50),
+    ->     email VARCHAR(100),
+    ->     total_purchase DECIMAL(10,2),
+    ->     join_date DATE
+    -> );
+
+--inserting records
+INSERT INTO customers (customer_id, first_name, last_name, city, email, total_purchase, join_date)
+    -> VALUES
+    -> (1, 'Faizal', 'Khan', 'Chennai', 'faizal@example.com', 15000.00, '2024-05-10'),
+    -> (2, 'Ananya', 'Sharma', 'Delhi', 'ananya@gmail.com', 8200.00, '2023-11-01'),
+    -> (3, 'Rahul', 'Mehta', 'Mumbai', 'rahulm@gmail.com', 12000.50, '2024-01-15'),
+    -> (4, 'Sneha', 'Raj', 'Chennai', 'sneha_raj@gmail.com', 4500.00, '2022-07-20'),
+    -> (5, 'Vikram', 'Joshi', 'Bangalore', 'vikram.j@gmail.com', 23000.00, '2024-03-05');
+
+-- Customer record filtering system 
+SELECT * FROM customers
+    -> WHERE city = 'Chennai' AND total_purchase > 10000;
++-------------+------------+-----------+---------+--------------------+----------------+------------+
+| customer_id | first_name | last_name | city    | email              | total_purchase | join_date  |
++-------------+------------+-----------+---------+--------------------+----------------+------------+
+|           1 | Faizal     | Khan      | Chennai | faizal@example.com |       15000.00 | 2024-05-10 |
++-------------+------------+-----------+---------+--------------------+----------------+------------+
