@@ -1,0 +1,37 @@
+-- create table products
+CREATE TABLE products (
+    ->     ProductID INT PRIMARY KEY,
+    ->     ProductName VARCHAR(100),
+    ->     Price INT
+    -> );
+
+--insert records in table
+INSERT INTO products (ProductID, ProductName, Price)
+    -> VALUES
+    -> (1, 'Laptop', 55000),
+    -> (2, 'Headphones', 1500),
+    -> (3, 'Smartphone', 35000),
+    -> (4, 'Keyboard', 900),
+    -> (5, 'Monitor', 12000);
+-- view table
+select * from products;
++-----------+-------------+-------+
+| ProductID | ProductName | Price |
++-----------+-------------+-------+
+|         1 | Laptop      | 55000 |
+|         2 | Headphones  |  1500 |
+|         3 | Smartphone  | 35000 |
+|         4 | Keyboard    |   900 |
+|         5 | Monitor     | 12000 |
++-----------+-------------+-------+
+
+--Max/Min product price
+SELECT
+    ->     MAX(Price) AS max_price,
+    ->     MIN(Price) AS min_price
+    -> FROM products;
++-----------+-----------+
+| max_price | min_price |
++-----------+-----------+
+|     55000 |       900 |
++-----------+-----------+
