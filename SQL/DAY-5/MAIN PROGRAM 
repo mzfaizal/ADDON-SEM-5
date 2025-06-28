@@ -1,0 +1,8 @@
+--Sales report generator with grouping command 
+
+SELECT 
+    ProductName,
+    SaleDate,
+    SUM(Amount) AS TotalSales
+FROM sales
+GROUP BY ProductName, SaleDate;
