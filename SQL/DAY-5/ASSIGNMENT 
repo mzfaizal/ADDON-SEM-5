@@ -1,0 +1,8 @@
+--Sales report generator with grouping command 
+
+SELECT 
+    Department,
+    Name,
+    Salary
+FROM employees
+ORDER BY Department, Name;
